@@ -1,0 +1,16 @@
+{
+    "model": "sample.ifc",
+    "schema": "IFC4",
+    "checks": [
+        {
+            "rule": "ISO 19650 Spatial Containment",
+            "status": "WARNING",
+            "details": "5 elements lack spatial assignment."
+        },
+        {
+            "rule": "IFC GlobalID Integrity",
+            "status": "PASS",
+            "details": "0 duplicate GlobalIDs detected."
+        }
+    ]
+}
