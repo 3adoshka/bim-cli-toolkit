@@ -1,0 +1,18 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
+FILE_NAME('','2026-09-27T15:34:23',(''),(''),'IfcOpenShell 0.8.5-1c5b825','IfcOpenShell 0.8.5-1c5b825','');
+FILE_SCHEMA(('IFC4'));
+ENDSEC;
+DATA;
+#1=IFCPROJECT('0TN5Nq2SjFQR9Tnc6yGLEh',$,'Test Project',$,$,$,$,$,$);
+#2=IFCSITE('2b5x8CPK9EsvphJkG3LUtC',$,'Test Site',$,$,$,$,$,$,$,$,$,$,$);
+#3=IFCBUILDING('1O4RzK8TPA_fLmpFQAdDhM',$,'Test Building',$,$,$,$,$,$,$,$,$);
+#4=IFCBUILDINGSTOREY('32O2tLR9X1vA0m2hU0EGIM',$,'Ground Floor',$,$,$,$,$,$,$);
+#5=IFCWALL('2A_NVig753qBC2Cqt6W8$s',$,'Wall 1',$,$,$,$,$,$);
+#6=IFCWALL('1GagSdE0jBlw46MDutpHeC',$,'Wall 2',$,$,$,$,$,$);
+#7=IFCCOLUMN('3XPehvnur1VBbuFsK26w22',$,'Column 1',$,$,$,$,$,$);
+#8=IFCSLAB('3jCn27CIfFG98Kas98iVmd',$,'Slab 1',$,$,$,$,$,$);
+#9=IFCBEAM('3GlCAOY$H55QBOw0ihulWB',$,'Beam 1',$,$,$,$,$,$);
+ENDSEC;
+END-ISO-10303-21;
