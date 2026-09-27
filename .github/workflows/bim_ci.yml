@@ -1,0 +1,40 @@
+name: Enterprise BIM CI/CD Pipeline
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  bim-audit-and-coordination:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.14
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.14"
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install ifcopenshell tabulate trimesh shapely pandas openpyxl specklepy
+
+    - name: Run Baseline Sample Generator
+      run: python make_sample.py
+
+    - name: Execute ISO 19650 Compliance Auditor
+      run: python compliance_checker.py sample.ifc
+
+    - name: Execute buildingSMART IDS Auditor
+      run: python ids_auditor.py sample.ifc
+
+    - name: Execute Automated Clash Detection Engine
+      run: python clash_detector.py sample.ifc
+
+    - name: Execute Server-Side QTO Dataframe Pipeline
+      run: python server_qto.py sample.ifc
